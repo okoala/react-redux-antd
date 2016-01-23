@@ -8,8 +8,8 @@ import { Link } from 'react-router'
 import './Home.less'
 
 @connect(
-  state => ({}),
-  dispatch => Object.assign(bindActionCreators(Action, dispatch))
+  state => ({...state}),
+  dispatch => bindActionCreators(Action, dispatch)
 )
 export default class HomeView extends React.Component {
   constructor () {
@@ -21,7 +21,7 @@ export default class HomeView extends React.Component {
 
   render () {
     return (
-      <div className="p-home">
+      <div>
         Hello World!
       </div>
     )

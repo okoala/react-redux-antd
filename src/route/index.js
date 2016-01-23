@@ -6,23 +6,22 @@ import AppView from '../views/App'
 import HomeView from '../views/Home/Home'
 import TopicView from '../views/Topic/Topic'
 import NotFoundView from '../views/NotFound/NotFound'
-import LoginView from '../views/Login/Login'
 
 export default function routes(store) {
-  // 需要做权限控制的时候开启
-  // const validate = function (nextState, replaceState, callback) {
-  //   const isLoggedIn = !!store.getState().auth.authenticated
-  //   if (!isLoggedIn) {
-  //     replaceState(null, '/login')
-  //   }
-  //   callback()
-  // }
+  const validate = function (nextState, replaceState, callback) {
+    // 需要做权限控制的时候开启
+    // const isLoggedIn = !!store.getState().auth.authenticated
+    // if (!isLoggedIn) {
+    //   replaceState(null, '/login')
+    // }
+    callback()
+  }
 
   return (
     <Route>
       <Route component={AppView} onEnter={validate}>
         <Route path='/' component={HomeView} />
-        <Route path='/t/:topicId' component={View} />
+        <Route path='/t/:topicId' component={TopicView} />
       </Route>
     </Route>
   );

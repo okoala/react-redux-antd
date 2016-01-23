@@ -18,6 +18,6 @@ export default {
   topicsHot: V.resource('http://www.v2ex.com/api/topics/hot.json'),
   showNode: V.resource('http://www.v2ex.com/api/nodes/show.json'),
   showTopic: V.resource('http://www.v2ex.com/api/topics/show.json'),
-  showReply: V.resource('http://www.v2ex.com/api/replies/show.json')
+  showReply: V.resource('http://www.v2ex.com/api/replies/show.json'),
   showMember: V.resource('http://www.v2ex.com/api/members/show.json')
 }

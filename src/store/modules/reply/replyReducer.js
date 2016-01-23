@@ -1,7 +1,7 @@
 import { createReducer } from '../../../util'
 import { message } from 'antd'
 import types from '../../types'
-import InitState from './orderInitState'
+import InitState from './replyInitState'
 
 export default createReducer(new InitState, {
   [`${types.GET_TOPIC_REPLIES}_SUCCESS`]: (state, data, params) => {

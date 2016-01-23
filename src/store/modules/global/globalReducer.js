@@ -1,7 +1,7 @@
 import { createReducer } from '../../../util'
 import { message } from 'antd'
 import types from '../../types'
-import InitState from './orderInitState'
+import InitState from './globalInitState'
 
 export default createReducer(new InitState, {
   [`${types.GET_SITE_INFO}_SUCCESS`]: (state, data) => {
