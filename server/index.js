@@ -74,7 +74,7 @@ app.use(lusca({
 }));
 // app.use(middleware.csrf());
 app.use(compress());
-app.use('/api', middleware.proxy(config.api_target));
+app.use('/proxy', middleware.proxy(config.api_target));
 app.use(middleware.router({index: paths.dist('public/index.html')}));
 app.use(middleware.static(paths.dist('')));
 app.use(middleware.error());

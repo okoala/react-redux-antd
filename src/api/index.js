@@ -11,13 +11,13 @@ Resource(V)
 V.http.options.emulateJSON = true
 
 export default {
-  siteInfo: V.resource('http://www.v2ex.com/api/site/info.json'),
-  siteStats: V.resource('http://www.v2ex.com/api/site/stats.json'),
-  nodes: V.resource('http://www.v2ex.com/api/nodes/all.json'),
-  topicsLatest: V.resource('http://www.v2ex.com/api/topics/latest.json'),
-  topicsHot: V.resource('http://www.v2ex.com/api/topics/hot.json'),
-  showNode: V.resource('http://www.v2ex.com/api/nodes/show.json'),
-  showTopic: V.resource('http://www.v2ex.com/api/topics/show.json'),
-  showReply: V.resource('http://www.v2ex.com/api/replies/show.json'),
-  showMember: V.resource('http://www.v2ex.com/api/members/show.json')
+  siteInfo: V.resource('/proxy/api/site/info.json'),
+  siteStats: V.resource('/proxy/api/site/stats.json'),
+  nodes: V.resource('/proxy/api/nodes/all.json'),
+  topicsLatest: V.resource('/proxy/api/topics/latest.json'),
+  topicsHot: V.resource('/proxy/api/topics/hot.json'),
+  showNode: V.resource('/proxy/api/nodes/show.json'),
+  showTopic: V.resource('/proxy/api/topics/show.json'),
+  showReply: V.resource('/proxy/api/replies/show.json'),
+  showMember: V.resource('/proxy/api/members/show.json')
 }

@@ -18,5 +18,5 @@
     }
   }],
   "port": 4005,
-  "api_target": "http://your_server/"
+  "api_target": "http://www.v2ex.com/"
 }
