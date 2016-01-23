@@ -2,11 +2,7 @@
  * States
  *
  */
-import accountInitState from './modules/account/accountInitState'
-import authInitState from './modules/auth/authInitState'
-import incomeInitState from './modules/income/incomeInitState'
-import orderInitState from './modules/order/orderInitState'
-import shopInitState from './modules/shop/shopInitState'
+import topicInitState from './modules/topic/topicInitState'
 import userInitState from './modules/user/userInitState'
 
 /**
@@ -15,11 +11,7 @@ import userInitState from './modules/user/userInitState'
  * @return {[type]} [description]
  */
 const initialState = {
-  account: new accountInitState,
-  auth: new authInitState,
-  income: new incomeInitState,
-  order: new orderInitState,
-  shop: new shopInitState,
+  topic: new topicInitState,
   user: new userInitState
 }
 

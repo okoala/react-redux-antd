@@ -1,11 +1,7 @@
-import * as accountAction from './modules/account/accountAction'
-import * as authAction from './modules/auth/authAction'
-import * as orderAction from './modules/order/orderAction'
-import * as shopAction from './modules/shop/shopAction'
+import * as topicAction from './modules/topic/topicAction'
+import * as userAction from './modules/user/userAction'
 
 export default {
-  ...accountAction,
-  ...authAction,
-  ...orderAction,
-  ...shopAction
+  ...topicAction,
+  ...userAction,
 }
