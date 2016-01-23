@@ -1,0 +1,5 @@
+{
+  "env": "development",
+  "port": 4005,
+  "api_target": "http://your_server/"
+}

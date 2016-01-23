@@ -1,0 +1,83 @@
+.p-login {
+  .login-content {
+    position: fixed;
+    width: 100%;
+    height: 70%;
+
+    overflow: hidden;
+
+    background-size: cover;
+    // background-attachment: fixed;
+    background-position: center;
+    background-image: url(../../styles/img/loding_bg_1920.jpg);
+
+    transition: all .4s cubic-bezier(.12,.4,.29,1.455);
+    transform: rotateX(-70deg);
+    transform-style: preserve-3d;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+
+    &.actived {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+
+    .login-content-header {
+      height: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 40px;
+    }
+
+    .ant-input {
+      height: 40px;
+      font-size: 14px;
+    }
+
+    .ant-form-item {
+      margin-right: 0;
+    }
+
+    .ant-form-item label {
+      font-size: 18px;
+      font-weight: normal;
+      color: #fff;
+    }
+
+    .login-form {
+      margin-top: 40px;
+      position: absolute;
+      bottom: 0;
+      width: 740px;
+      left: 50%;
+      margin-left: -370px;
+    }
+
+    .login-submit {
+      color: #ffffff;
+      font-size: 18px;
+      padding: 7px 0;
+
+      input[type="submit"] {
+        height: auto;
+        width: auto;
+      }
+
+      a {
+        color: #ffffff;
+      }
+    }
+
+    .login-submit-btn {
+      background: transparent;
+      border: 0 none;
+      margin-right: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 460px;
+      border: none;
+    }
+  }
+}

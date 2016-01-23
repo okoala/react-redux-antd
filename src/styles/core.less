@@ -1,0 +1,156 @@
+@import 'vendor/_normalize.less';
+
+.main-container{
+  a {
+    color: #ff6f00;
+
+    &:hover {
+      color: #ff8d35;
+    }
+  }
+  .ant-table {
+    tr:hover {
+      background: #fff8f2;
+    }
+  }
+  .ant-btn-primary {
+    background-color: #ff6f00;
+    border-color: #ff6f00;
+
+    &:hover {
+      background-color: #ff8d35;
+      border-color: #ff8d35;
+    }
+  }
+  .ant-btn-ghost {
+    &:hover {
+      color: #ff8d35;
+      border-color: #ff8d35;
+    }
+  }
+  .ant-divider {
+    margin: 0 7px;
+  }
+  .ant-input {
+    &:hover {
+      border-color: #ff6f00;
+    }
+    &:focus {
+      border-color: #ff6f00;
+      outline: 0;
+      box-shadow: 0 0 0 2px #FFD4B3;
+    }
+  }
+  .ant-select-selection:hover {
+    border-color: #ff6f00;
+  }
+  .ant-select-open .ant-select-selection {
+    border-color: #57c5f7;
+    outline: 0;
+    box-shadow: 0 0 0 2px #FFE4CF;
+  }
+}
+
+
+.shop-accept {
+  color: #87d068;
+
+  &:hover {
+    color: #389211;
+  }
+}
+
+.shop-refuse {
+  color: #f60;
+
+  &:hover {
+    color: #BF4E02;
+  }
+}
+
+.main-container {
+  .view-container {
+    overflow: hidden;
+    padding: 20px;
+    margin-left: 200px;
+  }
+}
+.react-star-rating__star {
+  width: 25px;
+}
+.react-star-rating__star #star-flat {
+  fill: #c6c6c6;
+}
+.react-star-rating__star #star-flat:hover {
+  fill: #ffa91b;
+}
+
+.react-star-rating__root {
+  font-size: 2em;
+
+  display: inline-block;
+
+  vertical-align: middle;
+}
+.react-star-rating__root.rating-editing:hover {
+  cursor: pointer;
+}
+
+.rating-container {
+  position: relative;
+
+  display: inline-block;
+  overflow: hidden;
+
+  vertical-align: middle;
+
+  color: #e3e3e3;
+}
+.rating-container:before {
+  content: attr(data-content);
+}
+.rating-container .rating-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  -webkit-transition: all .01s;
+     -moz-transition: all .01s;
+          transition: all .01s;
+  white-space: nowrap;
+
+  color: #f5a71b;
+
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#fdbd47), to(#f5a71b));
+}
+.rating-container .rating-stars:before {
+  content: attr(data-content);
+}
+
+.react-rating-caption {
+  font-size: 1.25em;
+
+  margin-right: .5em;
+
+  vertical-align: middle;
+}
+
+.rating-disabled .rating-container:hover {
+  cursor: not-allowed;
+}
+
+.react-star-rating__size--sm {
+  font-size: 1em;
+}
+
+.react-star-rating__size--md {
+  font-size: 2em;
+}
+
+.react-star-rating__size--lg {
+  font-size: 2.5em;
+}
+
+

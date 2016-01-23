@@ -1,0 +1,114 @@
+.p-home {
+  .title {
+    line-height: 50px;
+    font-weight: 500;
+  }
+
+  .account-item {
+    height: 260px;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #FDFDFD;
+    position: relative;
+    margin-left: -1px;
+
+
+    &:hover {
+      .money {
+        transform: scale(1.2)
+      }
+    }
+
+    .triangle {
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      width: 0;
+      height: 0;
+      border-width: 0 0 12px 12px;
+      border-color: transparent transparent #C2C2C2 transparent;
+      border-style: solid;
+      transition: border-color .5s ease;
+    }
+
+    &:hover .triangle {
+      border-color: transparent transparent #888888 transparent;
+    }
+
+    &.order {
+      background: #fff0e6;
+
+      .count {
+        color: #f60;
+      }
+    }
+
+    &.unapply {
+      background: #f3faf0;
+
+      .money {
+        color: #87d068;
+      }
+    }
+
+    &.unmoney {
+      background: #eaf8fe;
+
+      .money {
+        color: #2db7f5;
+      }
+    }
+
+    &.finished {
+      background: #fff9ee;
+
+      .money {
+        color: #fac450;
+      }
+    }
+
+    &:last-child {
+      border-right: 1px solid #E6E6E6;
+    }
+
+    .money {
+      font-size: 38px;
+      margin-top: 60px;
+      display: block;
+      transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .embrace {
+      color: #f60;
+    }
+
+    .desc {
+      margin-top: 20px;
+      font-weight: 500;
+      color: #696969;
+    }
+  }
+
+  .account-content {
+    clear: both;
+    overflow: hidden;
+  }
+
+  .order-content {
+    padding-top: 50px;
+  }
+
+  .waitMaintanceWrap {
+    margin-top: -15px;
+    .title {
+      font-size: 16px;
+    }
+  }
+
+}
+
+

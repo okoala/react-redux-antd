@@ -1,0 +1,22 @@
+{
+  "apps": [{
+    "name": "ReactRedux",
+    "script": "./server/index.js",
+    "log_date_format": "YYYY-MM-DD",
+    "exec_mode": "cluster_mode",
+    "instances": "1",
+    "merge_logs" : true,
+    "max_memory_restart" : "1024M",
+    "args": ["--env_config=production"],
+    "env": {
+      "NODE_ENV_CONFIG": "production",
+      "COMMON_ENV_VAR": "true",
+      "COMMON_VARIABLE": "true"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  }],
+  "port": 4005,
+  "api_target": "http://your_server/"
+}

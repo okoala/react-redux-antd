@@ -1,0 +1,107 @@
+.c-menu {
+  width: 200px;
+
+  .ant-affix {
+    bottom: 0;
+    width: 200px;
+
+    .left-menu {
+      top: 0;
+    }
+  }
+
+  .left-menu {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+
+    width: 200px;
+    min-height: 400px;
+    padding-bottom: 50px;
+
+    overflow-y: auto;
+
+    border-right: 1px solid #f1f1f1;
+    background-color: #f9f9f9;
+
+    > ul > li {
+      overflow: hidden;
+
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    li .title {
+      font-size: 14px;
+      font-weight: 500;
+
+      position: relative;
+      position: relative;
+      z-index: 1;
+
+      display: block;
+
+      margin: 0;
+      padding: 15px 0 15px 40px;
+
+      cursor: pointer;
+      transition: all .5s, border .5s;
+
+      color: #5c6b77;
+      background: #f9f9f9;
+      border-left: 3px solid transparent;
+      text-shadow: 0 1px 1px rgba(7, 40, 49, .25);
+    }
+
+    .active {
+      color: #209ae4;
+      background: #eaf8fe;
+    }
+
+    li[open=open] .title,
+    li .title:hover,
+    li .title.active {
+      color: #ff8b28;
+      background: #fff8f2;
+      border-left: 3px solid #ff8b28;
+    }
+
+    .title a {
+      color: #ff8b28;
+    }
+
+    .anticon {
+      font-size: 15px;
+
+      margin-right: 7px;
+
+      vertical-align: 1px;
+    }
+
+    .subitem a {
+      font-size: 12px;
+      line-height: 40px;
+
+      display: block;
+
+      height: 40px;
+      padding-left: 62px;
+
+      color: #5c6b76;
+      text-shadow: 0 1px 1px rgba(7, 40, 49, .16);
+    }
+
+    .anticon-order:before {
+      content: '\e60b';
+    }
+  }
+
+  .logo-img {
+    background: url(../../styles/img/logo_1.png) no-repeat;
+    width: 114px;
+    height: 123px;
+    position: fixed;
+    bottom: 20px;
+    left: 44px;
+  }
+}
