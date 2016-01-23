@@ -1,25 +1,18 @@
-import types from '../../types'
 import { createReducer } from '../../../util'
 import { message } from 'antd'
+import types from '../../types'
 import InitState from './orderInitState'
 
-const initState = new InitState
+export default createReducer(new InitState, {
+  [`${types.GET_SITE_INFO}_SUCCESS`]: (state, data) => {
+    return state.set('siteInfo', data)
+  },
 
+  [`${types.GET_SITE_STATS}_SUCCESS`]: (state, data) => {
+    return state.set('siteStats', data)
+  },
 
-export default createReducer(initState, {
-  /**
-   * 开始订单状态
-   * @param  {[type]} state  [description]
-   * @param  {[type]} action [description]
-   * @return {[type]}        [description]
-   */
-  [`${types.START_SHOP_ORDER}_SUCCESS`]: (state, action) => {
-    message.success('操作成功')
-
-    setTimeout(function() {
-      window.history.go(-1)
-    }, 1000)
-
-    return setOrderProcess(state, action)
+  [`${types.GET_ALL_NODES}_SUCCESS`]: (state, data) => {
+    return state.set('nodes', data)
   }
 })

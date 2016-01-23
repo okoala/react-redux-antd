@@ -1,25 +1,10 @@
-import types from '../../types'
 import { createReducer } from '../../../util'
 import { message } from 'antd'
+import types from '../../types'
 import InitState from './orderInitState'
 
-const initState = new InitState
-
-
-export default createReducer(initState, {
-  /**
-   * 开始订单状态
-   * @param  {[type]} state  [description]
-   * @param  {[type]} action [description]
-   * @return {[type]}        [description]
-   */
-  [`${types.START_SHOP_ORDER}_SUCCESS`]: (state, action) => {
-    message.success('操作成功')
-
-    setTimeout(function() {
-      window.history.go(-1)
-    }, 1000)
-
-    return setOrderProcess(state, action)
+export default createReducer(new InitState, {
+  [`${types.GET_TOPIC_REPLIES}_SUCCESS`]: (state, data, params) => {
+    return state.setIn(['replies', params.topic_id], data)
   }
 })

@@ -1,19 +1,59 @@
 /**
- * 订单相关的业务逻辑
+ * 话题
  */
 
 import api from '../../../api'
 import types from '../../types'
 
-import * as OrderProcess from '../../../constants/OrderProcess'
-
-// 开始任务
-export function startOrder (params) {
+// 获取最新的主题
+export function getTopicsLatest () {
   return {
-    type: types.START_SHOP_ORDER,
+    type: types.GET_TOPICS_LATEST,
     payload: {
-      promise: api.startOrder.save(params)
+      promise: api.topicsLatest.get()
+    }
+  }
+}
+
+// 获取最热的主题
+export function getTopicsHot () {
+  return {
+    type: types.GET_TOPICS_HOT,
+    payload: {
+      promise: api.topicsHot.get()
+    }
+  }
+}
+
+// 根据主题ID获取主题内容
+export function getTopicById (id) {
+  return {
+    type: types.GET_TOPIC_BY_ID,
+    payload: {
+      promise: api.showTopic.get({id})
     },
-    params
+    params: {id}
+  }
+}
+
+// 根据NODE ID获取主题内容
+export function getTopicByNodeId (node_id) {
+  return {
+    type: types.GET_TOPIC_BY_NODE,
+    payload: {
+      promise: api.showTopic.get({node_id})
+    },
+    params: {node_id}
+  }
+}
+
+// 根据Username获取主题内容
+export function getTopicByUser (username) {
+  return {
+    type: types.GET_TOPIC_BY_USER,
+    payload: {
+      promise: api.showTopic.get({username})
+    },
+    params: {username}
   }
 }

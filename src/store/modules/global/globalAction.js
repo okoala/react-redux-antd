@@ -1,19 +1,35 @@
 /**
- * 订单相关的业务逻辑
+ * 全局的一些数据
  */
 
 import api from '../../../api'
 import types from '../../types'
 
-import * as OrderProcess from '../../../constants/OrderProcess'
-
-// 开始任务
-export function startOrder (params) {
+// 获取v2ex网站基本信息
+export function getSiteInfo () {
   return {
-    type: types.START_SHOP_ORDER,
+    type: types.GET_SITE_INFO,
     payload: {
-      promise: api.startOrder.save(params)
-    },
-    params
+      promise: api.siteInfo.get()
+    }
+  }
+}
+
+// 获取网站状态
+export function getSiteStats () {
+  return {
+    type: types.GET_SITE_STATS,
+    payload: {
+      promise: api.siteStats.get()
+    }
+  }
+}
+
+export function getAllNodes () {
+  return {
+    type: types.GET_ALL_NODES,
+    payload: {
+      promise: api.nodes.get()
+    }
   }
 }

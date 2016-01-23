@@ -1,8 +1,7 @@
-import { Record } from 'immutable'
+import { Record, Map } from 'immutable'
 
 const InitState = Record({
-  userData: null,
-  hasAlter: false
+  userInfo: new Map()
 })
 
 export default InitState

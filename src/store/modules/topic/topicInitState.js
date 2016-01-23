@@ -1,5 +1,11 @@
-import { Record } from 'immutable'
+import { Record, Map } from 'immutable'
 
-const initState = Record({})
+const initState = Record({
+  latest: [],
+  hot: [],
+  topics: new Map(),
+  nodeTopics: new Map(),
+  userTopics: new Map()
+})
 
 export default initState

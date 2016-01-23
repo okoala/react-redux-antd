@@ -1,19 +1,17 @@
 /**
- * 订单相关的业务逻辑
+ * 回复相关
  */
 
 import api from '../../../api'
 import types from '../../types'
 
-import * as OrderProcess from '../../../constants/OrderProcess'
-
-// 开始任务
-export function startOrder (params) {
+// 根据主题ID获取回复内容
+export function getRepliesByTopicId (topic_id) {
   return {
-    type: types.START_SHOP_ORDER,
+    type: types.GET_TOPIC_REPLIES,
     payload: {
-      promise: api.startOrder.save(params)
+      promise: api.showReply.save({topic_id})
     },
-    params
+    params: {topic_id}
   }
 }

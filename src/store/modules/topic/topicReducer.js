@@ -1,25 +1,26 @@
-import types from '../../types'
 import { createReducer } from '../../../util'
 import { message } from 'antd'
+import types from '../../types'
 import InitState from './orderInitState'
 
-const initState = new InitState
+export default createReducer(new InitState, {
+  [`${types.GET_TOPICS_LATEST}_SUCCESS`]: (state, data) => {
+    return state.set('latest', data)
+  },
 
+  [`${types.GET_TOPICS_HOT}_SUCCESS`]: (state, data) => {
+    return state.set('hot', data)
+  },
 
-export default createReducer(initState, {
-  /**
-   * 开始订单状态
-   * @param  {[type]} state  [description]
-   * @param  {[type]} action [description]
-   * @return {[type]}        [description]
-   */
-  [`${types.START_SHOP_ORDER}_SUCCESS`]: (state, action) => {
-    message.success('操作成功')
+  [`${types.GET_TOPIC_BY_ID}_SUCCESS`]: (state, data, params) => {
+    return state.setIn(['topics', params.id], data)
+  },
 
-    setTimeout(function() {
-      window.history.go(-1)
-    }, 1000)
+  [`${types.GET_TOPIC_BY_NODE}_SUCCESS`]: (state, data, params) => {
+    return state.setIn(['nodeTopics', params.node_id], data)
+  },
 
-    return setOrderProcess(state, action)
+  [`${types.GET_TOPIC_BY_USER}_SUCCESS`]: (state, data, params) => {
+    return state.setIn(['nodeTopics', params.username], data)
   }
 })
