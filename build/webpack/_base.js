@@ -43,7 +43,7 @@ const webpackConfig = {
         loader  : 'babel',
         query: {
           cacheDirectory: true,
-          plugins: ['transform-runtime', 'transform-decorators-legacy'],
+          plugins: ['transform-runtime', 'transform-decorators-legacy', 'antd'],
           presets: ['es2015', 'react', 'stage-0'],
         }
       },
@@ -53,7 +53,7 @@ const webpackConfig = {
           'style-loader',
           'css-loader',
           'autoprefixer?browsers=last 2 version',
-          'less-loader'
+          'less-loader?{"sourceMap":true,"modifyVars":{"primary-color": "#ff6f00", "link-color": "#ff6f00"}}' // 调整antd的主题颜色
         ]
       },
       {
