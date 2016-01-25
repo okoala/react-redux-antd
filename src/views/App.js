@@ -23,7 +23,6 @@ export default class MainLayout extends React.Component {
   componentWillMount () {
     this.props.getSiteInfo()
     this.props.getSiteStats()
-    this.props.getAllNodes()
   }
 
   render () {

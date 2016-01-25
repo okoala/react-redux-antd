@@ -6,6 +6,7 @@ import { QueueAnim, Table } from 'antd'
 import { Link } from 'react-router'
 
 import Nodebar from '../../components/Nodebar/Nodebar'
+import TopicList from '../../components/TopicList/TopicList'
 
 import './Home.less'
 
@@ -25,7 +26,7 @@ export default class HomeView extends React.Component {
     return (
       <div className="content">
         <Nodebar/>
-        Hello World!
+        <TopicList dataSource={this.props.topic.current}/>
       </div>
     )
   }

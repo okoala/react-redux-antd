@@ -5,7 +5,7 @@ export const noop = function noop() {}
 export function createReducer (initialState, reducerMap) {
   return (state = initialState, action) => {
     const reducer = reducerMap[action.type]
-    return reducer ? reducer(state, action.payload, action.params) : state
+    return reducer ? reducer(state, action.payload.data, action.params) : state
   }
 }
 
