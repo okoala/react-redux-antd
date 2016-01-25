@@ -5,6 +5,8 @@ import Action from '../../store/actions'
 import { QueueAnim, Table } from 'antd'
 import { Link } from 'react-router'
 
+import Nodebar from '../../components/Nodebar/Nodebar'
+
 import './Home.less'
 
 @connect(
@@ -21,7 +23,8 @@ export default class HomeView extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="content">
+        <Nodebar/>
         Hello World!
       </div>
     )

@@ -30,7 +30,7 @@ export default class MainLayout extends React.Component {
     return (
       <div className='main-container'>
         <Navbar/>
-        <div className='view-container'>
+        <div className="main-wrapper">
           {this.props.children}
         </div>
       </div>

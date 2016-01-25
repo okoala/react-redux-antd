@@ -36,14 +36,14 @@ export function getTopicById (id) {
   }
 }
 
-// 根据NODE ID获取主题内容
-export function getTopicByNodeId (node_id) {
+// 根据NODE NAME获取主题内容
+export function getTopicByNodeName (node_name) {
   return {
     type: types.GET_TOPIC_BY_NODE,
     payload: {
-      promise: api.showTopic.get({node_id})
+      promise: api.showTopic.get({node_name})
     },
-    params: {node_id}
+    params: {node_name}
   }
 }
 
